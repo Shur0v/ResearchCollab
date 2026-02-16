@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans text-gray-900 bg-silk antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-hadfield text-white font-bold py-3 px-6 rounded hover:bg-blue-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-hadfield focus:ring-offset-2;
+  }
+  
+  .btn-secondary {
+    @apply bg-white text-hadfield font-bold py-3 px-6 rounded border border-hadfield hover:bg-blue-50 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-hadfield focus:ring-offset-2;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 bg-white border border-morning rounded focus:outline-none focus:ring-1 focus:ring-hadfield text-sm transition-all;
+  }
+
+  .card {
+    @apply bg-white border border-morning shadow-sm p-6;
+  }
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #cccccc;
+  border-radius: 20px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #999999;
+}

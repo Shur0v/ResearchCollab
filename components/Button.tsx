@@ -8,21 +8,21 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   loading?: boolean;
 }
 
-export const Button: React.FC<ButtonProps> = ({ 
-  children, 
-  variant = 'primary', 
-  size = 'md', 
+export const Button: React.FC<ButtonProps> = ({
+  children,
+  variant = 'primary',
+  size = 'md',
   loading = false,
   className = '',
-  ...props 
+  ...props
 }) => {
   const baseStyles = 'inline-flex items-center justify-center font-medium transition-all duration-200 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed';
-  
+
   const variants = {
-    primary: `bg-[${COLORS.PRIMARY}] text-white hover:bg-opacity-90 shadow-sm border border-[${COLORS.PRIMARY}]`,
-    secondary: `bg-white text-[${COLORS.PRIMARY}] border border-[${COLORS.LAYER}] hover:border-[${COLORS.PRIMARY}]`,
-    ghost: `bg-transparent text-[${COLORS.STRUCTURAL}] hover:text-[${COLORS.PRIMARY}] hover:bg-[${COLORS.LAYER}]`,
-    accent: `bg-[${COLORS.ACCENT}] text-white hover:bg-opacity-90`,
+    primary: `bg-hadfield text-white hover:bg-opacity-90 shadow-sm border border-hadfield`,
+    secondary: `bg-white text-hadfield border border-morning hover:border-hadfield`,
+    ghost: `bg-transparent text-cerebral hover:text-hadfield hover:bg-morning`,
+    accent: `bg-dodgeroll text-white hover:bg-opacity-90`,
   };
 
   const sizes = {
@@ -33,7 +33,7 @@ export const Button: React.FC<ButtonProps> = ({
   };
 
   return (
-    <button 
+    <button
       className={`${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`}
       disabled={loading}
       {...props}
