@@ -1,0 +1,8 @@
+{
+  "name": "ResearchCollab.ai",
+  "description": "An enterprise-grade research intelligence environment for high-stakes academic and corporate discovery.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
